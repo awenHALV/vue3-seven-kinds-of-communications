@@ -1,26 +1,36 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <!--props方式-->
+  <p>props方式</p>
+  <demo1></demo1>
+  <!--emit方式-->
+  <p>emit方式</p>
+  <demo2></demo2>
+  <!--v-model方式-->
+  <p>v-model方式</p>
+  <demo3></demo3>
+  <!--refs方式-->
+  <p>refs方式</p>
+  <demo4></demo4>
+  <p>provide/inject方式</p>
+  <demo5></demo5>
+  <p>EventBus事件总线（不推荐）(推荐mitt或者tiny-emitter)</p>
+  <p>状态管理工具（Vuex/pinia）</p>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Demo1 from './views/demo1/index.vue';
+import Demo2 from './views/demo2/index.vue';
+import Demo3 from './views/demo3/index.vue';
+import Demo4 from './views/demo4/index.vue';
+import Demo5 from './views/demo5/index.vue';
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Demo1,
+    Demo2,
+    Demo3,
+    Demo4,
+    Demo5
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
